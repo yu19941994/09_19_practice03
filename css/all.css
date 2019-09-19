@@ -1,0 +1,801 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+/*CSS Reset end*/
+
+.clearfix{
+	clear: both;
+}
+
+.wrap{
+	max-width: 1000px;
+	margin: 0 auto;
+
+}
+
+.header{
+	/*position: absolute;*/
+	top: 0;
+}
+
+.header .topbar{
+	background: black;
+
+	height: 56px;
+}
+
+.header h1{
+	padding-top: 8px;
+}
+
+.header h1 a{
+	background-image: url("../images/logo_w.png");
+	width: 120px;
+	height: 24px;
+	display: block;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-left: 16px;
+
+	background-repeat: no-repeat;
+}
+
+.header .topbar ul{
+	display: block;
+	float: right;
+	padding-right: 28px;
+}
+
+.header .topbar li{
+	float: left;
+	margin: 0 16px;
+}
+
+.header .topbar a{
+	display: block;
+	color: white;
+
+}
+
+.header .topbar a:hover{
+	color: pink;
+}
+
+.header .banner{
+	max-width: 1000px;
+}
+
+.header .banner>img{
+	width: 100%;
+}
+
+.showtopbar{
+  display: none;
+}
+
+@media (max-width: 480px) {
+	
+	.banner{
+		background-image: url("../images/header_mobile.png");
+		background-size: 480px;
+		height: 336px;
+
+	}
+
+	.header .banner>img{
+		display: none;
+	}
+
+	.showtopbar{
+		position: absolute;
+		top: 1px;
+		right: 1px;
+	}
+
+	.topbar ul{
+		/*隱藏選單開始*/
+    	max-height: 0px;
+    	overflow: hidden;
+    	/*隱藏選單結束*/
+    	transition: max-height 2.3s;
+    	margin-top: 1px;
+    	/*絕對定位疊在網頁上*/
+    	position: absolute;
+    	z-index: 100;
+    	/*header 80px+1px boder 線條*/
+    	top: 51px;
+    	left: 0;
+    	right: 0;
+    	background: pink;
+    	padding-right: 0px;
+	}
+
+	.topbar li{
+		width: 480px;
+		text-align: center;
+		float: none;
+		border-bottom: 1px solid #FF73B3;
+		height: 30px;
+
+	}
+
+	.topbar a{
+		padding-top: 4px;
+	}
+
+	.topbar a:hover{
+		color: black;
+	}
+
+	.showtopbar{
+   		display: block;
+    	float: right;
+    	margin: 1em;
+  	}
+
+  	.showtopbar img{
+  		width: 30px;
+  	}
+
+  	.topbar-show .topbar ul{
+   		max-height: 500px
+  }
+
+}
+
+
+.introduction{
+	padding: 40px 80px;
+	background: #efe9e7;
+	color: #3d1101;
+}
+
+.introduction h2{
+	text-align: center;
+	font-size: 26px;
+	line-height: 1.5;
+}
+
+.introduction h3{
+	text-align: center;
+}
+
+.introduction p{
+	margin: 20px 15px;
+	line-height: 1.2;
+}
+
+.introduction li{
+	float: left;
+	display: block;
+	width: 280px;
+}
+
+.introduction img{
+	padding: 40px 40px 25px 40px;
+}
+
+@media (max-width: 768px) {
+	.introduction li{
+		width: 200px;
+	}
+
+	.introduction img{
+		width: 150px;
+		padding: 30px 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.introduction li{
+		width: 350px;
+	}
+
+	.introduction img{
+		width: 250px;
+		padding: 30px;
+		margin: 0 auto;
+	}
+
+	.introduction h3{
+		font-size: 24px;
+	}
+}
+
+.chef{
+	background: #3d1101;
+	color: white;
+}
+
+.chef img{
+	width: 400px;
+	float: left;
+	margin-left: 40px;
+}
+
+.chef .chefcontent{
+	float: left;
+	margin: 60px 130px 0 30px;
+	max-width: 400px;
+}
+
+.chef p{
+	/*width: 400px;*/
+	line-height: 1.2;
+	padding: 10px 0 30px 0;
+	width: 90%;
+}
+
+.chef h4{
+	font-size: 24px;
+	line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+	.chef{
+		background-image:url("../images/main_chef_brown2.png");
+		background-repeat: no-repeat;
+		background-size: 300px;
+	}
+
+	.chef img{
+		display: none;
+	}
+
+	.chef .chefcontent{
+		margin: 30px 0 30px 350px;
+
+	}
+}
+
+@media (max-width: 767px) {
+	.chef .chefcontent{
+		max-width: 400px;
+	}
+}
+
+@media (max-width: 480px) {
+	.chef .chefcontent{
+		float: none;
+		margin: 0 auto;
+		padding: 16px;
+		width: 400px;
+
+	}
+
+	.chef{
+		background-image: none;
+	}
+
+	.chef img{
+		display: block;
+		float: none;
+		max-width: 480px;
+	}
+
+	.chef
+}
+
+.customer{
+	background: #efe9e7;
+	color: #3d1101;
+	padding: 50px 20px;
+	
+}
+
+.customer h5{
+	text-align: center;
+	font-size: 24px;
+}
+
+h6{
+	font-size: 20px;
+	margin: 15px;
+}
+
+.customer li{
+	display: block;
+	float: left;
+	width: 280px;
+	margin: 30px 20px;
+}
+
+.customer img, .customer h6{
+	display: block;
+	float: left;
+}
+
+.customer p{
+	margin-left: 80px;
+}
+
+.customer span{
+	float: right;
+}
+
+@media (max-width: 768px) {
+	.customer li{
+		width: 200px;
+	}
+
+	.customer p{
+		line-height: 1.2;
+	}
+}
+
+@media (max-width: 480px) {
+	.customer li{
+		width: 400px;
+	}
+	
+}
+
+.booking{
+	background: #f6f4f3;
+	color: #3d1101;
+	padding: 30px 0;
+}
+
+.booking h6{
+	text-align: center;
+	line-height: 1.5;
+}
+
+.booking .formdata{
+	margin: 20px 50px;
+	max-width: 1000px;
+}
+
+.booking .formdata img{
+	display: block;
+	float: left;
+	margin: 8px 8px 30px 8px;
+}
+
+.booking .formdata .formdetail{
+	float: left;
+	padding: 20px 0 0 20px;
+	max-width: 400px;
+	line-height: 2;
+	width: 60%;
+}
+
+.form-s{
+	/*width: 400px;*/
+	width: 90%;
+	height: 24px;
+}
+
+.cancel, .submit{
+	color: white;
+	border: none;
+	padding: 7px 20px;
+	border-radius: 3px;
+	float: right;
+	margin: 5px;
+}
+
+.cancel{
+	background: #a09e9e;
+
+}
+
+.submit{
+	background: #f56c23;
+}
+
+@media (max-width: 768px) {
+	.booking .formdata {
+		margin: 0 auto;
+		background-image: url("../images/map2.png");
+		background-repeat: no-repeat;
+		background-size: 40%;
+		max-width: 768px;
+	}
+
+	.booking .formdata img{
+		display: none;
+	}
+
+	.booking .formdata .formdetail{
+		width: 55%;
+		float: right;
+		margin: 0 8px;
+	}
+
+}
+
+@media (max-width: 480px) {
+	.booking .formdata{
+		margin: 0;
+	}
+
+	.booking .formdata img{
+		float: none;
+		display: block;
+	}
+
+	.booking .formdata .formdetail{
+		float: none;
+		background-image: none;
+		margin: 0px;
+	}
+}
+
+.footer{
+	background: #efe9e7;
+	color: #3d1101;
+	padding: 40px 50px;
+}
+
+.footer .contact>li{
+	float: left;
+	display: block;
+	width: 270px;
+}
+
+.footer .sns>li{
+	float: right;
+}
+
+.footer img{
+	float: right;
+}
+
+.footer .sns>li img{
+	width: 40px;
+	display: block;
+	float: left;
+	margin: 8px 6px;
+	border-radius: 5px;
+}
+
+.footer p{
+	padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+	.footer{
+		padding: 20px;
+	}
+
+	.footer img{
+		width: 180px;
+	}
+
+	.footer .contact>li{
+	 	width: 230px;
+	}
+}
+
+@media (max-width: 480px) {
+	.footer .contact>li{
+		width: 400px;
+	}
+
+	.contact h6{
+		font-size: 24px;
+	}
+}
+
+.address{
+	padding-left: 28px;
+	list-style-type: disc;
+}
+
+/*Index code End*/
+.content{
+	background: #efe9e7;
+	color: #3d1101;
+}
+
+.sidebar{
+	padding: 30px;
+	float: left;
+}
+
+.sidebar img{
+	width: 25px;
+	margin: 0 8px;
+}
+
+.sidebar h2{
+	font-size: 18px;
+}
+
+.sidebar ul{
+	margin: 30px 0;
+}
+
+.sidebar li{
+	display: block;
+	border-bottom: 1px solid #3d1101;
+	width: 200px;
+}
+
+.sidebar a{
+	display: block;
+	text-decoration: none;
+	color: #3d1101;;
+	margin: 8px;
+	font-size: 14px;
+}
+
+.sidebar a:hover{
+	color: orange;
+}
+
+.main{
+	float: left;
+	padding: 30px;
+	
+}
+
+.main .searching>input[type=text]{
+	float: left;
+	border: 1px solid #3d1101;
+	width: 380px;
+	background: #efe9e7;
+	height: 18px;
+}
+
+.shoppingcar>img{
+	margin: 0 20px;
+}
+
+.searchbtn{
+	background: #3d1101;
+	background-image: url("../images/search.png");
+	background-size: 18px;
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 22px;
+	border: 1px solid #3d1101;
+	float: left;
+}
+
+.shoppingcar{
+	float: right;
+}
+
+.shoppingcar p, .shoppingcar img{
+	float: left;
+}
+
+
+
+.menu{
+	max-width: 680px;
+}
+
+.menu li{
+	display: block;
+	box-shadow: 7px 7px 7px #AAAAAA;
+	width: 200px;
+	text-align: center;
+	height: 270px;
+	float: left;
+	margin: 20px 8px;
+	
+}
+
+.menu .like{
+	width: 30px;
+	z-index: 2;
+	position: absolute;
+	margin: 4px;
+
+}
+
+.menu .food{
+	width: 200px;
+	height: 100px;
+	z-index: 1;
+}
+
+.menu h3{
+	font-size: 18px;
+	margin: 10px;
+}
+
+.menu p{
+	font-size: 12px;
+	margin: 8px;
+}
+
+.menu h4{
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.menu li>input[type=button]{
+	border: 1px solid #f56c23;
+	background: #efe9e7;
+	color: #f56c23;
+	width: 170px;
+}
+
+@media (max-width: 768px) {
+	.sidebar{
+		float: none;
+	}
+
+	.sidebar ul{
+		margin: 30px auto;
+	}
+
+	.sidebar li{
+		float: left;
+		width: 150px;
+		text-align: center;
+		border-right: 1px solid #3d1101;
+		border-bottom: none;
+	}
+	
+	.main{
+		float: none;
+	}
+
+	.searching{
+		margin-left: 40px;
+	}
+
+	.shoppingcar{
+		margin-right: 40px;
+	}
+
+	.menu ul{
+		margin: 0 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.sidebar{
+		padding: 15px 30px;
+	}
+
+	.sidebar ul{
+		margin: 8px auto;
+	}
+
+	.sidebar li{
+		float: none;
+		border-right: none;
+		border-bottom: 1px solid #3d1101;
+		width: 400px;
+	}
+
+	.sidebar li a{
+		font-size: 16px;
+	}
+
+	.main{
+		padding: 15px 30px;
+	}
+
+	.searching{
+		margin: 0;
+	}
+
+	.main .searching>input[type=text]{
+		width: 250px;
+	}
+
+	.shoppingcar{
+		margin: 0;
+	}
+
+	.menu ul{
+		margin: 0 100px;
+	}
+}
+
+/*Order page End*/
+.logincontent{
+	background: #efe9e7;
+	color: #3d1101;
+	text-align: center;
+	padding: 40px 40px 10px 40px;
+}
+
+.login{
+	margin: 40px auto;
+	width: 300px;
+	height: 300px;
+	box-shadow: 7px 7px 7px #AAAAAA;
+	border-top: 4px solid #f56c23;
+}
+
+.logincontent h2{
+	font-size: 18px;
+	margin: 8px auto;
+}
+
+.login h3{
+	font-weight: bold;
+	margin: 10px auto;
+}
+
+.login>input[type=text]{
+	width: 265px;
+	height: 22px;
+	margin-top: 6px;
+}
+
+.login>input[type=button]{
+	color: white;
+	border: none;
+	padding: 7px 20px;
+	border-radius: 3px;
+	width: 120px;
+	font-size: 14px;
+	margin: 60px 6px 0 10px;
+}
+
+.login .font, .forget{
+	text-align: left;
+	margin-left: 14px;
+	margin-top: 14px;
+	font-size: 14px;
+}
+
+.register{
+	background: #a09e9e;
+}
+
+.enter{
+	background: #f56c23;
+}
+
+.forget{
+	color: #f56c23;
+}
